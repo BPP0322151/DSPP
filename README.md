@@ -328,10 +328,8 @@ ROC-AUC:           0.93   # Excellent discrimination (0.5 = random guessing, 1.0
 
 ### Confusion Matrix Analysis
 
-|                 | Predicted Pass | Predicted Fail |
-|-----------------|----------------|----------------|
-| **Actual Pass** | 300 (62.63%)    | 25 (5.22%)     |
-| **Actual Fail** | 27 (5.64%)     | 127 (26.51%)    |
+<img width="780" height="624" alt="image" src="https://github.com/user-attachments/assets/045d4e92-c87c-4e71-abf3-91136b7fa39e" />
+
 
 **Error Breakdown**:
 - **False Positives (Type I)**: 5.22% (predicted fail but actually passed)
