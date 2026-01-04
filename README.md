@@ -270,8 +270,6 @@ X_test_scaled = scaler.transform(X_test)  # Apply train parameters
 ### Exploratory Data Analysis (EDA)
 
 #### Correlation Analysis
-![Correlation Heatmap]()
-
 <img width="1020" height="777" alt="image" src="https://github.com/user-attachments/assets/53d98770-efff-4caa-ae7a-4f75103450d5" />
 
 
@@ -355,9 +353,6 @@ ROC-AUC:           0.93   # Excellent discrimination (0.5 = random guessing, 1.0
 ---
 
 ### ROC Curve
-
-![ROC Curve]
-
 <img width="691" height="547" alt="image" src="https://github.com/user-attachments/assets/8d832080-5a04-449c-8ff6-c9d37182c4b5" />
 
 
@@ -366,8 +361,6 @@ ROC-AUC:           0.93   # Excellent discrimination (0.5 = random guessing, 1.0
 ---
 
 ### Feature Importance (Coefficients)
-
-![Feature Importance](outputs/feature_importance.png)
 <img width="1189" height="790" alt="image" src="https://github.com/user-attachments/assets/f359e97a-551a-48d5-a159-d2a6b2e12187" />
 
 
