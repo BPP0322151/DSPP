@@ -372,9 +372,9 @@ ROC-AUC:           0.93   # Excellent discrimination (0.5 = random guessing, 1.0
 | 5 | **Extracurricular** | +0.3430 | Participation = **Moderate positive effect** on passing | <0.001*** |
 
 **Statistical Significance** (via statsmodels logistic regression):
-- `***` p<0.001 (Highly significant)
-- `**` p<0.01 (Very significant)
-- `*` p<0.05 (Significant)
+- p<0.001 (Highly significant)
+- p<0.01 (Very significant)
+- p<0.05 (Significant)
 
 ---
 
