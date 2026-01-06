@@ -271,9 +271,7 @@ X_test_scaled = scaler.transform(X_test)  # Apply train parameters
 <img width="1020" height="777" alt="image" src="https://github.com/user-attachments/assets/53d98770-efff-4caa-ae7a-4f75103450d5" />
 
 
-**Key Finding**: `Absences` shows strongest negative correlation with PassFail (-0.68), indicating:
-- **1 additional absence** → 8% decrease in pass probability
-- More impactful than `StudyTimeWeekly` (r=0.23)
+**Key Finding**: `Absences` shows strongest negative correlation with PassFail (-0.66)
 
 **Business Implication**: Attendance monitoring systems should trigger alerts at **5 absences** (statistically significant threshold from logistic coefficients).
 
