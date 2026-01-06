@@ -9,15 +9,15 @@
 
 ## Table of Contents
 
-- [Project Overview](project-overview)
-- [Business Problem](business-problem)
-- [Technical Architecture](technical-architecture)
-- [Installation & Setup](installation--setup)
-- [Data Engineering Approach](data-engineering-approach)
-- [Model Development & Rationale](model-development--rationale)
-- [Results & Performance](results--performance)
-- [Key Insights & Business Value](key-insights-&-business-value)
-- [Future Improvements](future-improvements)
+- [Project Overview](#project-overview)
+- [Business Problem](#business-problem)
+- [Technical Architecture](#technical-architecture)
+- [Installation & Setup](#installation--setup)
+- [Data Engineering Approach](#data-engineering-approach)
+- [Model Development & Rationale](#model-development--rationale)
+- [Results & Performance](#results--performance)
+- [Key Insights & Business Value](#key-insights--business-value)
+- [Future Improvements](#future-improvements)
 
 ---
 
