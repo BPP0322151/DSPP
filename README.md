@@ -49,7 +49,7 @@ Educational institutions often adopt **reactive** rather than **proactive** appr
 ### Potential Solution
 A **logistic regression classifier** that:
 1. **Identifies at-risk students** before their assessments
-2. **Quantifies feature importance** to guide targeted interventions (e.g., addressing absences vs. study time and which ones are most important)
+2. **Quantifies feature importance** to guide targeted interventions (addressing absences vs. study time and which ones are most important)
 3. **Provides probability scores of passing** (0-1)
 
 ### Impact
@@ -79,7 +79,7 @@ Python is an indutsty standard tool with many packages to deal with data science
 **Neural Networks** - Overkill for tabular data with 12 features; overfitting risk with only 2,392 samples
 
 **Why Logistic Regression?**
-1. **Interpretable coefficients**: Each feature's impact on failure risk is quantifiable (e.g., "1 additional absence increases failure odds by 12%")
+1. **Interpretable coefficients**: Each feature's impact on failure risk is quantifiable ("1 additional absence increases failure odds by x%")
 2. **Probability outputs**: Returns probabiity not just binary predictions, enabling risk tiers such as low, medium, and high.
 3. **Statistical rigor**: Compatible with hypothesis testing (p-values, confidence intervals using statsmodels)
 4. **Computational efficiency**: Trains in seconds making it lightweight and applicable in various dashboards
@@ -342,7 +342,7 @@ ROC-AUC:           0.93   # Excellent discrimination (0.5 = random guessing, 1.0
 - Low tolerance for "false alarms" that waste support resources
 
 **Unacceptable for educational context where:**
-- Missing an at-risk student has severe consequences (e.g., dropout, severe academic failure)
+- Missing an at-risk student has severe consequences (dropout, severe academic failure)
 - Enough tutoring capacity exists to support more students
 - Institutional priority is better to over-support than under-support
 
