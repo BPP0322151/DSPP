@@ -46,7 +46,7 @@ Educational institutions often adopt **reactive** rather than **proactive** appr
 - Missed opportunities for early intervention with at-risk students to improve their chance at passing
 - Inability to quantify which behavioral factors most influence academic outcomes
 
-### Potential Solution
+### Solution
 A **logistic regression classifier** that:
 1. **Identifies at-risk students** before their assessments
 2. **Quantifies feature importance** to guide targeted interventions (addressing absences vs study time and which ones are most important)
