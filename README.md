@@ -49,7 +49,7 @@ Educational institutions often adopt **reactive** rather than **proactive** appr
 ### Potential Solution
 A **logistic regression classifier** that:
 1. **Identifies at-risk students** before their assessments
-2. **Quantifies feature importance** to guide targeted interventions (addressing absences vs. study time and which ones are most important)
+2. **Quantifies feature importance** to guide targeted interventions (addressing absences vs study time and which ones are most important)
 3. **Provides probability scores of passing** (0-1)
 
 ### Impact
@@ -63,12 +63,12 @@ A **logistic regression classifier** that:
 
 ### Why Python?
 
-Python is an indutsty standard tool with many packages to deal with data science and machine learning. Here are some of the main ones I used in this project:
+Python is an industry standard tool with many packages to deal with data science and machine learning. Here are some of the main ones I used in this project:
 
-**Pandas** (Data cleaning & manipulation) Industry-standard for tabular data; `DataFrame` structure intuitive for feature engineering |
-**Scikit-learn** (Model training & evaluation) Amazing package to split into train and test datasets, while also assisting with model training and evaluating performance metrics.
-**Statsmodels** (Statistical inference) Provides p-values & confidence intervals for hypothesis testing (not available in Scikit-learn) |
-**Seaborn/Matplotlib** (Visualisation) Publication-quality plots; heatmaps ideal for correlation analysis |
+- **Pandas** (Data cleaning & manipulation) Industry-standard for tabular data. `DataFrame` structure intuitive for feature engineering
+- **Scikit-learn** (Model training & evaluation) Amazing package to split into train and test datasets, while also assisting with model training and evaluating performance metrics.
+- **Statsmodels** (Statistical inference) Provides p-values & confidence intervals for hypothesis testing (not available in Scikit-learn)
+- **Seaborn/Matplotlib** (Visualisation) Publication-quality plots alongside heatmaps making it ideal for correlation analysis
 
 ### Model Choice: Logistic Regression
 
@@ -76,7 +76,7 @@ Python is an indutsty standard tool with many packages to deal with data science
 
 **Linear Regression** - Requires continuous target variable (This project uses binary pass/fail)
 **Random Forest** - Black-box model which is not suitable. Stakeholders (educators/administrators in this case) require **interpretable** coefficients to justify targeted interventions
-**Neural Networks** - Overkill for tabular data with 12 features; overfitting risk with only 2,392 samples
+**Neural Networks** - Overkill for tabular data with 12 features - overfitting risk with only 2,392 samples
 
 **Why Logistic Regression?**
 1. **Interpretable coefficients**: Each feature's impact on failure risk is quantifiable ("1 additional absence increases failure odds by x%")
@@ -141,7 +141,7 @@ Before any modeling, I conducted a **data quality audit** against the **UK Gover
 
 #### Why This Framework?
 - **Industry standard**
-- **Thorough**: Covers 5 critical dimensions (vs. ad-hoc checks)
+- **Thorough**: Covers 5 critical dimensions (vs ad-hoc checks)
 
 #### Results
 
@@ -180,7 +180,7 @@ df['PassFail'] = (df['GradeClass'] < 3).astype(int)  # 1=Pass, 0=Fail
 
 **Rationale**:
 - Simplifies intervention logic (binary decision: provide support or not)
-- Matches stakeholder language ("at-risk" vs. "high-performing")
+- Matches stakeholder language ("at-risk" vs "high-performing")
 
 **Class Distribution**:
 - Pass: 32.1% (767 students)
@@ -224,7 +224,7 @@ df_train, df_test = train_test_split(
 ```
 
 **Why Stratification?**
-If I opted for random sampling, it could create a test set with 75% fails (vs. true 68%), leading to:
+If I opted for random sampling, it could create a test set with 75% fails (vs true 68%), leading to:
 - Overly pessimistic accuracy estimates
 - Biased threshold
 
@@ -304,7 +304,7 @@ model_scaled.fit(X_train_scaled, y_train)
 |--------|------------------|----------------|
 | **Accuracy** | Overall correctness | High-level performance (but misleading with class imbalance) |
 | **Balanced Accuracy** | Average of sensitivity/specificity | **Corrects for 68% fail bias**, resulting in a true measure of model quality |
-| **F1-Score** | Harmonic mean of precision/recall | Balances false positives vs. false negatives |
+| **F1-Score** | Harmonic mean of precision/recall | Balances false positives vs false negatives |
 | **ROC-AUC** | Discrimination ability across thresholds | Measures separability of classes (0.5=random, 1.0=perfect) |
 
 #### Results
@@ -361,11 +361,11 @@ ROC-AUC:           0.93   # Excellent discrimination (0.5 = random guessing, 1.0
 
 | Rank | Feature | Coefficient | Interpretation | P-value |
 |------|---------|-------------|----------------|---------|
-| 1 | **Absences** | -2.7047 | Increased Absences = **HUGE negative effect** on passing (strongest predictor) | <0.001*** |
-| 2 | **StudyTimeWeekly** | +0.5534 | Increased Study time = **Moderate positive effect** on passing | <0.001*** |
-| 3 | **ParentalSupport** | +0.4688 | Increased Support level = **Moderate positive effect** on passing | <0.001*** |
-| 4 | **Tutoring** | +0.3649 | Having tutor = **Moderate positive effect** on passing | <0.001*** |
-| 5 | **Extracurricular** | +0.3430 | Participation = **Moderate positive effect** on passing | <0.001*** |
+| 1 | **Absences** | -2.7047 | Increased Absences = **HUGE negative effect** on passing (strongest predictor) | <0.001 |
+| 2 | **StudyTimeWeekly** | +0.5534 | Increased Study time = **Moderate positive effect** on passing | <0.001 |
+| 3 | **ParentalSupport** | +0.4688 | Increased Support level = **Moderate positive effect** on passing | <0.001 |
+| 4 | **Tutoring** | +0.3649 | Having tutor = **Moderate positive effect** on passing | <0.001 |
+| 5 | **Extracurricular** | +0.3430 | Participation = **Moderate positive effect** on passing | <0.001 |
 
 **Statistical Significance** (via statsmodels logistic regression):
 - p<0.001 (Highly significant)
@@ -377,7 +377,7 @@ ROC-AUC:           0.93   # Excellent discrimination (0.5 = random guessing, 1.0
 ## Key Insights & Business Value
 
 **Actionable Insights**:
-1. **Attendance is critical**: Absences have a **dramatically larger effect** than all other predictora combined (Around 5x stronger than the next predictor!)
+1. **Attendance is critical**: Absences have a **dramatically larger effect** than all other predictora combined (Around 5x stronger than the next predictor)
 2. **Study time matters**: Significant positive effect on outcomes
 3. **Parental support helps**: Clear measurable benefit
 4. **Tutoring shows improvement**: Meaningful improvement in passing likelihood
