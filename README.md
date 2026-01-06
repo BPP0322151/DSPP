@@ -392,8 +392,8 @@ ROC-AUC:           0.93   # Excellent discrimination (0.5 = random guessing, 1.0
 
 ### Model Enhancements
 - **Ensemble Methods**: Compare with Random Forest and XGBoost to evaluate accuracy gains while maintaining interpretability
-- **Threshold Optimization**: Adjust decision threshold (currently 0.5) to minimize false negatives in high-stakes educational contexts
+- **Threshold Optimisation**: Adjust decision threshold (currently 0.5) to minimise false negatives in high-stakes educational contexts
 
 ### Feature Engineering
-- **Interaction Terms**: Test `Absences × ParentalSupport` to identify if parental involvement moderates attendance effects
-- **Polynomial Features**: Investigate non-linear relationships (e.g., diminishing returns of study time beyond 15 hours/week)
+- **Interaction Terms**: Test `Absences × ParentalSupport` to identify if parental involvement improves attendance effects
+- **Polynomial Features**: Investigate non-linear relationships such as diminishing returns of study time beyond 15 hours/week
