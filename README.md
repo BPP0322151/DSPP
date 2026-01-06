@@ -18,7 +18,6 @@
 - [Results & Performance](#-results--performance)
 - [Key Insights & Business Value](#-key-insights--business-value)
 - [Future Improvements](#-future-improvements)
-- [References](#-references)
 
 ---
 
